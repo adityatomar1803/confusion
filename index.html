@@ -15,6 +15,26 @@
 
 <body>
 
+    <!-- we can even have lighter color navbar  
+    container class to define the width of the content of the webpage, so that it does not expand on the entire viewport -->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nivebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#">Ristorante Con Fusion</a>
+            <!-- mr-auto is used to specify right margin meaning the right margin will be as much as possible means the content will be pushed to the left as much as possible-->
+            <div class="collapse navbar-collapse" id="nivebar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <header class="jumbotron">
         <div class="container"> 
             <div class="row row-header" >
@@ -69,7 +89,7 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -104,7 +124,7 @@
         </div>
     </footer>
         <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script> -->
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
