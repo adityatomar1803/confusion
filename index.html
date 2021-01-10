@@ -38,6 +38,7 @@
         </div>
     </nav>
 
+    <!-- jumbotron class is for making a jumbotron like header material for top shelf in the website -->
     <header class="jumbotron">
         <div class="container"> 
             <div class="row row-header" >
@@ -45,23 +46,43 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+
+                <!-- align-self-center is for aligning the item vertically center to the container -->
+                <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="img-fluid" alt="logo">
+                    <!-- img-fluid class creates responsive images  -->
+                    <!-- alt tag is used to add description to the images to help the search engine  -->
                 </div>
+
+                <div class="col-12 col-sm-3 align-self-center">
+                    <a class="btn btn-warning btn-block" href="#reservi" role="button">Reserve Table</a>
+                    
+                </div>
+                
             </div>
         </div>
     </header>
 
     <div class="container">
         <div class="row row-content align-items-center">
+            <!-- align-items-center is used to align the items vertically centeric inside the container  -->
             <div class="col-12 col-sm-4 col-md-3 order-sm-last">
+                <!-- order-sm-last is used to align this particular items at the end of this particular div -->
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
+
             <div class="col col-sm col-md order-sm-first">
+                <!-- The media object helps build complex and repetitive components where some media is positioned alongside content that doesn’t wrap around said media. Plus, it does this with only two required classes thanks to flexbox. -->
+                <!-- media contains an image(img tag) and the description(div with body)  -->
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail align-self-center"
                             src="img/uthappizza.png" alt="Uthappizza">
+                    <!-- img-thumbnail is to treat a image as a thumbnail -->
+                    <!-- d-flex here make the image a flex object  -->
+
                     <div class="media-body">
+                        <!-- media-body contains the description of the media object  -->
+                        <!-- badge is used to create a badge and badge-danger to create a red colored badge -->
                         <h2 class="mt-0">Uthappizza
                             <span class="badge badge-danger">
                                 HOT
@@ -70,10 +91,14 @@
                                 $4.44
                             </span>
                         </h2>
+                        <!-- d-none is used to hide the tag when viewed on extra-small screen -->
+                        <!-- d-sm-block is used to showcase the tag on small screen size to extra-large screen size -->
+
                         <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
                             Italian pizza, topped with Cerignola olives, ripe vine
                             cherry tomatoes, Vidalia onion, Guntur chillies and
-                            Buffalo Paneer.</p>
+                            Buffalo Paneer.
+                        </p>
                     </div>
                 </div>
 
@@ -85,9 +110,103 @@
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+
+            <div class="col col-sm col-md order-sm-last">
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <h2 class="mt-0">
+                            Weekend Grand Buffet
+                            <span class="badge badge-danger">
+                                NEW
+                            </span>
+                        </h2>
+                        <p class="d-none d-sm-block">
+                            Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person 
+                        </p>
+
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail align-self-center"
+                    src="img/buffet.png" alt="buffet">
+                </div>
+            </div>
+        </div>
+        <div class="row row-content justify-content-center" id="reservi">
+            <div class="col-12 col-sm-8">
+                <div class="card">
+
+                    <div class="card-header bg-warning text-white">
+                        <h3>
+                            <strong>Reserve a Table</strong>
+                        </h3>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-sm-3">
+                                <label for="radiobutton">Number of Guests</label>
+                            </div>
+                            <div class="col-12 col-sm-9">
+                                <div id="radiobutton">
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">1
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">2
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">3
+                                        </label>
+                                    </div> 
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">4
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">5
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">6
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-12 col-sm-3">
+                                <label for="datetime">Date and Time</label>
+                            </div>
+                            <div class="col-12 col-sm">
+                                <div id="datetime"> 
+                                    <input type="text" id="date" placeholder=" Date">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm">
+                                <div > 
+                                    <input type="text" id="time" placeholder=" Time">
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-sm-3 offset-sm-3 mt-5">
+                                <button type="submit" class="btn btn-primary">
+                                    Reserve
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -111,7 +230,7 @@
                 </div>
                 
             </div>
-        </div>
+        
     </div>
 
     <footer class="footer">
