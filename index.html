@@ -34,8 +34,13 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
-                <span class="navbar-text">
+                <!-- <span class="navbar-text">
                     <a data-toggle="modal" href="" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span> -->
+                <span class="navbar-text">
+                    <a id="loginSign" role="button">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -43,7 +48,50 @@
         </div>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
+    
+
+    <!-- jumbotron class is for making a jumbotron like header material for top shelf in the website -->
+    <header class="jumbotron">
+        <div class="container"> 
+            <div class="row row-header" >
+                <div class="col-12 col-sm-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+
+                <!-- align-self-center is for aligning the item vertically center to the container -->
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="img/logo.png" class="img-fluid" alt="logo">
+                    <!-- img-fluid class creates responsive images  -->
+                    <!-- alt tag is used to add description to the images to help the search engine  -->
+                </div>
+
+                <!-- <div class="col-12 col-sm-3 align-self-center">
+                    <a class="btn btn-warning btn-block" 
+                    data-toggle="tooltip" data-html="true" title="Or Call Us at <br><strong>+91 7060990884</strong> "
+                    data-placement="bottom"
+                    href="#reservi" role="button">Reserve Table</a>
+                    
+                </div> -->
+                <!-- Button trigger modal -->
+                <!-- <div class="col-12 col-sm-3 align-self-center">
+                    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reservationModal">
+                        Reserve Table
+                      </button>
+                </div> -->
+                <div class="col-12 col-sm-3 align-self-center">
+                    <button type="button" class="btn btn-warning btn-block" id="reserveButton">
+                        Reserve Table
+                      </button>
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </header>
+
+    <div id="loginModal" class="modal fade" role="dialog" style="display: none;">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
@@ -83,42 +131,6 @@
             </div>
         </div>
     </div>
-
-    <!-- jumbotron class is for making a jumbotron like header material for top shelf in the website -->
-    <header class="jumbotron">
-        <div class="container"> 
-            <div class="row row-header" >
-                <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                </div>
-
-                <!-- align-self-center is for aligning the item vertically center to the container -->
-                <div class="col-12 col-sm-3 align-self-center">
-                    <img src="img/logo.png" class="img-fluid" alt="logo">
-                    <!-- img-fluid class creates responsive images  -->
-                    <!-- alt tag is used to add description to the images to help the search engine  -->
-                </div>
-
-                <!-- <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-warning btn-block" 
-                    data-toggle="tooltip" data-html="true" title="Or Call Us at <br><strong>+91 7060990884</strong> "
-                    data-placement="bottom"
-                    href="#reservi" role="button">Reserve Table</a>
-                    
-                </div> -->
-                <!-- Button trigger modal -->
-                <div class="col-12 col-sm-3 align-self-center">
-                    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reservationModal">
-                        Reserve Table
-                      </button>
-                </div>
-
-                
-                
-            </div>
-        </div>
-    </header>
 
     <div class="modal fade" role="dialog" id="reservationModal" style="display: none;">
         <div class="modal-dialog modal-lg" role="content">
@@ -214,8 +226,8 @@
     <div class="container">
 
         <div class="row row-container">
-            <div class="col">
-                <div id="mycarousel" class="carousel slide" data-ride="carousel" >
+            <div class="col"> 
+                <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="1500">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <img src="img/uthappizza.png" alt="uthappizza" class="d-block img-fluid">
@@ -433,20 +445,35 @@
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script>
+            // $(document).ready(function(){
+            //     $('#mycarousel').carousel({
+            //         interval:1000 
+            //     });
+            // });
             $(document).ready(function(){
-                $('carouselButton').click(function(){
-                    if($('carouselButton').children('span').hasClass('fa-pause')){
-                        $('mycarousel').carousel('pause');
-                        $('carouselButton').children('span').removeClass('fa-pause');
-                        $('carouselButton').children('span').addClass('fa-play');
+                $('#carouselButton').click(function(){
+                    if($('#carouselButton').children('span').hasClass('fa-pause')){
+                        $('#mycarousel').carousel('pause');
+                        $('#carouselButton').children('span').removeClass('fa-pause');
+                        $('#carouselButton').children('span').addClass('fa-play');
                     }
                     else{
-                        $('mycarousel').carousel('cycle');
-                        $('carouselButton').children('span').removeClass('fa-play');
-                        $('carouselButton').children('span').addClass('fa-pause');
+                        $('#mycarousel').carousel('cycle');
+                        $('#carouselButton').children('span').removeClass('fa-play');
+                        $('#carouselButton').children('span').addClass('fa-pause');
                     }
                 });
             });
+            $('#loginSign').click(function(){
+                
+                $('#loginModal').modal('show');
+            });
+
+            $('#reserveButton').click(function(){
+                
+                $('#reservationModal').modal('show');
+            });
+            
         </script>
 </body>
 
