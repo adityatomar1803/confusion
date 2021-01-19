@@ -21,10 +21,11 @@ $carousel-item-height: 300px;
     }
 }
 
+
 .modal-body{
     background-color: $background-pale;
 }
-
+    
 .row-header{
     @include zero-margin(0px,0px);
 }
